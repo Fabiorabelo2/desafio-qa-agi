@@ -1,7 +1,7 @@
 import { Locator, Page, expect } from '@playwright/test';
 
 /**
- * Page Object da página de resultados de busca (padrão WordPress).
+ * Page Object da página de resultados de busca (padrão WordPress/Elementor).
  */
 export class SearchResultsPage {
   readonly page: Page;
@@ -11,13 +11,15 @@ export class SearchResultsPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.resultados = page.locator('article, .search-result, .post');
+    this.resultados = page.locator(
+      'article, .search-result, .elementor-post, .post-item, .post'
+    );
     this.titulosResultados = page.locator(
-      'article h1 a, article h2 a, article h3 a, .entry-title a'
+      'article h1 a, article h2 a, article h3 a, .entry-title a, .elementor-post__title a'
     );
     this.mensagemSemResultado = page
       .getByText(
-        /nenhum resultado|nada foi encontrado|não encontramos|sorry, but nothing matched|no results/i
+        /nenhum resultado|nenhum conteúdo|nada foi encontrado|não encontramos|não foi encontrado|sem resultados|sorry, but nothing matched|no results|nothing found|it seems we can/i
       )
       .first();
   }
