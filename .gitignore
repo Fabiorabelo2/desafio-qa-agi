@@ -1,0 +1,13 @@
+# Node
+node_modules/
+test-results/
+playwright-report/
+
+# Java
+target/
+*.class
+
+# JMeter
+*.jtl
+relatorio-*/
+jmeter.log
