@@ -8,6 +8,8 @@ Solução completa do desafio técnico de QA, dividida em três frentes independ
 | 🔌 **API** | [Dog API](https://dog.ceo/dog-api/documentation) | Java 17 + RestAssured + JUnit 5 + Allure, validação de contrato (JSON Schema) | [`api-dogapi/`](api-dogapi/) |
 | ⚡ **Performance** | [BlazeDemo](https://www.blazedemo.com) — compra de passagem | JMeter 5.6 (carga + pico), 250 req/s, p90 < 2s | [`performance-blazedemo/`](performance-blazedemo/) |
 
+> ⚡ **Resultado do teste de performance:** o critério de 250 req/s com p90 < 2s foi **atendido no teste de carga** (250 req/s, p90 de 554 ms) e **não atendido no teste de pico** (p90 de 3,3s durante a rajada, com HTTP 429 do servidor). Parecer completo, com análise por fase e limitações, em [`performance-blazedemo/README.md`](performance-blazedemo/README.md#parecer-da-execução). Relatórios HTML do JMeter: [`relatorio-carga/`](performance-blazedemo/relatorio-carga/) e [`relatorio-pico/`](performance-blazedemo/relatorio-pico/).
+
 ## Execução rápida
 
 ```bash

@@ -91,7 +91,7 @@
         <hashTree>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Lista de voos exibida" enabled="true">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="reserve">Choose your flight</stringProp>
+              <stringProp name="reserve">Flights from Paris to Buenos Aires</stringProp>
             </collectionProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
             <boolProp name="Assertion.assume_success">false</boolProp>
@@ -304,7 +304,7 @@
         <hashTree>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Lista de voos exibida" enabled="true">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="reserve">Choose your flight</stringProp>
+              <stringProp name="reserve">Flights from Paris to Buenos Aires</stringProp>
             </collectionProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
             <boolProp name="Assertion.assume_success">false</boolProp>

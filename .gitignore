@@ -8,6 +8,8 @@ target/
 *.class
 
 # JMeter
+# Os .jtl brutos (16 MB) ficam fora do repositório; os relatórios HTML gerados a
+# partir deles são versionados como evidência da execução (relatorio-carga/ e relatorio-pico/).
 *.jtl
-relatorio-*/
-jmeter.log
+jmeter*.log
+cpu-*.csv
