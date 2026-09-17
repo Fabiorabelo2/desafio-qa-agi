@@ -53,7 +53,9 @@ O relatório HTML (pasta `relatorio-*/index.html`) traz **APDEX, throughput, per
 
 **Execução:** 17/09/2026, 14:47–14:58 (BRT), com os perfis padrão dos scripts.
 **Gerador de carga:** notebook AMD Ryzen 5 3500U (4 núcleos/8 threads), 5,9 GB de RAM, Windows 11, JDK 17.0.20 (Temurin), JMeter 5.6.3 (heap de 2 GB), conexão residencial.
-**Relatórios:** `relatorio-carga/index.html` e `relatorio-pico/index.html`.
+**Relatórios:** `relatorio-carga/index.html` e `relatorio-pico/index.html` (versionados neste repositório).
+
+> 💡 O GitHub não renderiza HTML direto na interface. Para ver os dashboards, clone o repositório e abra os arquivos no navegador, ou baixe o ZIP em *Code → Download ZIP*. Os números consolidados também estão em `relatorio-*/statistics.json` e na tabela abaixo.
 
 ### Resumo
 
