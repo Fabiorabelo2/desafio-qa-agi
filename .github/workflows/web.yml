@@ -1,0 +1,33 @@
+name: Testes Web (Playwright)
+
+on:
+  push:
+    paths: ['web-blogdoagi/**', '.github/workflows/web.yml']
+  pull_request:
+    paths: ['web-blogdoagi/**']
+  workflow_dispatch:
+
+jobs:
+  testes-web:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web-blogdoagi
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Instalar dependências
+        run: npm ci
+      - name: Instalar navegador
+        run: npx playwright install --with-deps chromium
+      - name: Executar testes
+        run: npm test
+      - name: Publicar relatório HTML
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: web-blogdoagi/playwright-report/
+          retention-days: 15
